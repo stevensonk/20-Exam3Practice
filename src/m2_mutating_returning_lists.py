@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Keely Stevenson.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -38,7 +38,7 @@ def main():
 def run_test_doubler():
     """ Tests the    doubler    function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  doubler  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     #
@@ -84,6 +84,46 @@ def run_test_doubler():
     # TO DO 2 (continued): Add your ADDITIONAL test(s) here:
     # -------------------------------------------------------------------------
 
+    # Test 2:
+    list1 = [12, 0, 3, -6, 8]
+    list2 = [4, 3, 3]
+    correct_list1_after = [24, 0, 6, -12, 16]
+    correc_list2_after = [4, 3, 3]
+    expected = [8, 6, 6]
+
+    print()
+    print('BEFORE the function is called:')
+    print('     List 1: ', list1)
+    print('     List 2: ', list2)
+    answer = doubler(list1, list2)
+    print('AFTER the functino is called:')
+    print('     Now List 1 is: ', list1)
+    print('     This should be: ', correct_list1_after)
+    print('     Now List 2 is: ', list2)
+    print('     This should be: ', correc_list2_after)
+    print('     The returned value is: ', answer)
+    print('     This should be: ', expected)
+
+    # Test 3:
+    list1 = []
+    list2 = []
+    correct_list1_after = []
+    correc_list2_after = []
+    expected = []
+
+    print()
+    print('BEFORE the function is called:')
+    print('     List 1: ', list1)
+    print('     List 2: ', list2)
+    answer = doubler(list1, list2)
+    print('AFTER the functino is called:')
+    print('     Now List 1 is: ', list1)
+    print('     This should be: ', correct_list1_after)
+    print('     Now List 2 is: ', list2)
+    print('     This should be: ', correc_list2_after)
+    print('     The returned value is: ', answer)
+    print('     This should be: ', expected)
+
 
 def doubler(list1, list2):
     """
@@ -103,7 +143,7 @@ def doubler(list1, list2):
         :type list2: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -111,6 +151,14 @@ def doubler(list1, list2):
     #    DIFFICULTY:      4
     #    TIME ESTIMATE:   5 minutes.
     # -------------------------------------------------------------------------
+
+    for k in range(len(list1)):
+        list1[k] = 2 * list1[k]
+
+    new_list = []
+    for k in list2:
+        new_list = new_list + [2 * k]
+    return new_list
 
 
 # -----------------------------------------------------------------------------
